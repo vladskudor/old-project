@@ -1,0 +1,24 @@
+* {
+  color: white;
+  text-transform: uppercase;
+}
+
+.content {
+  margin-top: calc(50vh - 150px);
+}
+
+.back {
+  color: lightblue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back:before {
+  content: '< ';
+}
+
+.back:hover {
+  color: black;
+}
+
+

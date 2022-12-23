@@ -1,0 +1,12 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1860px;
+}
+
+body {
+  background: #212529!important;
+  /*background: white;*/
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

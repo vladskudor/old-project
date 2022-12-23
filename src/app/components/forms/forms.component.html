@@ -1,0 +1,206 @@
+<div class="header-button">
+  <div>
+    <button (click)="router.navigate(['/login'])" *ngIf="!currentUser">
+      BACK
+    </button>
+    <button (click)="logout()" *ngIf="currentUser">
+      <svg class="bi bi-box-arrow-left" fill="currentColor" height="25" viewBox="0 0 16 16" width="25"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"
+          fill-rule="evenodd"/>
+        <path
+          d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+          fill-rule="evenodd"/>
+      </svg>
+      LOGOUT
+    </button>
+  </div>
+</div>
+
+<!--Реєстрація-->
+<section id="sectionRegistr" style="padding: 30px">
+  <div id="form1">
+    <form action="#">
+      <div>
+        <p style="color: grey;font-size: 12px;font-family: cursive">* Усі поля повинні містити коректні дані</p>
+      </div>
+
+      <div>
+        <label for="email">
+          <p>Придумайте ім'я для поштової скриньки</p>
+          <input #inpmail [(ngModel)]="email"
+                 [ngClass]="{ none: email.length < 0 , small: email.length > 0 , big: email.length > 7 }" id="email"
+                 name="email" placeholder="@gmaill.com"
+                 type="email">
+          <div>
+            <p>{{ email }}</p>
+          </div>
+        </label>
+      </div>
+
+      <div class="block-password">
+        <label for="password">
+          <p>Придумайте пароль</p>
+          <input #inppassword [(ngModel)]="passw1"
+                 [ngClass]="{ none: passw1 < 0 , small: passw1 > 0 , big: passw1 > 7 }"
+                 id="password"
+                 maxlength="8" name="password" placeholder="password" type="password">
+          <button (click)="inppassword.type = 'text'"
+                  *ngIf="inppassword.type == 'password'"
+                  id="form-button">(o)
+          </button>
+          <button (click)="inppassword.type = 'password'"
+                  *ngIf="inppassword.type == 'text'"
+                  id="form-button">(o)
+          </button>
+          <em [ngStyle]="{ display: passw1 < 8 ? 'block' : 'none' }"
+              style="display: none;color: red;font-size: 14px">
+            <br>Пароль повинен містити 8 символів!</em>
+<!--          <div>-->
+<!--            <p>{{ passw1 }}</p>-->
+<!--          </div>-->
+        </label>
+        <div>
+          <div id="passwordiv">
+            <div
+              [ngStyle]="{background: passw1 < 8 ? 'red' : 'green' , width: passw1 < 8 ? '100px' : '185px'}"
+              id="passwinsidediv">
+              <!--password-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="passw2">
+          <p>Введіть пароль повторно</p>
+          <input #inppassw2 [(ngModel)]="passw2"
+                 [ngClass]="{ none: passw2 < 0 , small: passw2 !== passw1, big: passw2 == passw1 && passw1 > 0 }"
+                 id="passw2"
+                 maxlength="8"
+                 name="passw2" placeholder="підтвердити пароль" type="password">
+<!--          <em [ngStyle]="{ display: passw2.length !== passw1 ? 'block' : 'none' }" style="color: red;">Паролі не-->
+<!--            співпадають!</em>-->
+          <em *ngIf="passw1 !== passw2" style="color: red;">Паролі не
+            співпадають!</em>
+<!--          <div>-->
+<!--            <p>{{ passw2 }}</p>-->
+<!--          </div>-->
+        </label>
+      </div>
+
+      <div class="name-surname-block">
+        <label for="name">
+          <p>Як вас звати?</p>
+          <div>
+            <input #inpname [(ngModel)]="name" id="name" name="name" placeholder="name" type="text">
+            <input #inpsurname [(ngModel)]="surname" name="surname" placeholder="surname" type="text">
+          </div>
+          <div>
+            <p>{{ name }} {{ surname }}</p>
+          </div>
+        </label>
+      </div>
+
+      <div>
+        <label for="date">
+          <p>Дата народження</p>
+          <div class="birsday-block">
+            <input #inpday [(ngModel)]="day" id="date" name="day" placeholder="day" type="number">
+            <input #inpmoonth [(ngModel)]="moonth" name="moon" placeholder="moon" type="number">
+            <input #inpyear [(ngModel)]="year" name="year" placeholder="year" type="number">
+          </div>
+        </label>
+        <div>
+          <p>{{ day }} {{ moonth }} {{ year }}</p>
+        </div>
+      </div>
+
+      <div class="block-sex">
+        <p>Оберіть рід</p>
+        <label for="r1">Жіночий<input #r1 (click)="funR1(r1 , r2)" id="r1" name="r1" type="radio"></label>
+        <label for="r2">Чоловічий<input #r2 (click)="funR2(r1 , r2 )" id="r2" name="r2" type="radio"></label>
+      </div>
+
+      <div class="button-finish">
+        <button
+          (click)="register(inpmail.value , inppassword.value , inppassw2.value , inpname.value , inpsurname.value , inpday.value , inpmoonth.value , inpyear.value , sex)"
+          id="form-button">
+          Завершити <b> > </b></button>
+
+        <button id="form-button" type="reset">Очистити</button>
+
+        <button
+          (click)="printForm( user , inpmail , inppassword , inppassw2 , inpname.value , inpsurname , inpday , inpmoonth , inpyear , sex)"
+          id="form-button">
+          Увійти
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section style="padding: 0;background: #eee;">
+  <div *ngIf="currentUser">
+    <h3 style="text-align: center;">
+      <h1>Здоров <i style="text-transform: uppercase;color: gray;text-decoration: underline">{{ currentUser.name }}</i>
+      </h1>
+      <table border="1px" class="user-table">
+        <tr style="text-transform: uppercase">
+          <th>id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>@mail.com</th>
+          <!--          <th style="border-bottom: 1px solid black">CHANGE</th>-->
+        </tr>
+        <tr *ngFor="let user of allUsers; let i = index;">
+          <td>
+            {{i + 1}}
+          </td>
+          <td #nameUser (click)="nameChange(user)" id="td-text">
+            {{user.name}}
+          </td>
+
+          <td (click)="nameChange(user)" id="td-text">
+            {{user.surname}}
+          </td>
+
+          <td (click)="nameChange(user)">
+            {{user.email}}
+          </td>
+
+          <!--          <td id="td-button">-->
+          <!--            <button (click)="deleteUser(user)">DELETE</button>-->
+          <!--            <button (click)="editUser(user , nameUser)">EDIT</button>-->
+          <!--          </td>-->
+        </tr>
+      </table>
+    </h3>
+
+    <!--    <div class="edit-user-container">-->
+    <!--      <ul style="position: relative">-->
+    <!--        <li>-->
+    <!--          <div>-->
+    <!--            <i>NAME</i> <input type="text" [(ngModel)]="currentEditUser.name">-->
+    <!--          </div>-->
+    <!--          <div>-->
+    <!--            <i>LAST NAME</i> <input type="text" [(ngModel)]="currentEditUser.surname">-->
+    <!--          </div>-->
+    <!--          <div>-->
+    <!--            <i>PASSWORD</i> <input type="text" [(ngModel)]="currentEditUser.passw1">-->
+    <!--          </div>-->
+    <!--          <div>-->
+    <!--            <i>@mail.com</i><input [(ngModel)]="currentEditUser.email" type="text">-->
+    <!--          </div>-->
+    <!--          <div style="padding: 10px 0 10px 0">-->
+    <!--            <button (click)="saveChange(nameUser)" id="button-set">-->
+    <!--              SET VALUE-->
+    <!--            </button>-->
+    <!--          </div>-->
+    <!--        </li>-->
+    <!--      </ul>-->
+    <!--    </div>-->
+  </div>
+</section>
+

@@ -1,0 +1,594 @@
+$color: #ff6515;
+$shadow: 0px 0px 5px 5px #ecf9ff;
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  text-align: center;
+  font-size: 36px;
+  @media (max-width: 1200px) {
+    font-size: calc(12px + (36 - 12) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+.background-block{
+  background: #eee;
+}
+
+h3{
+  text-align: center;
+  font-size: 24px;
+  color: $color;
+  @media (max-width: 1200px) {
+    font-size: calc(12px + (24 - 12) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+p{
+  margin: 0;
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: calc(10px + (16 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 2px solid #fff;
+}
+
+svg{
+  cursor: pointer;
+}
+
+.burger-menu{
+  position: fixed;
+  top: 15px;
+  right: 0;
+  z-index: 1;
+  display: none;
+  @media (max-width: 610px) {
+    display: inline;
+  }
+}
+
+.content{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 50px;
+  @media (max-width: 500px) {
+    padding-bottom: calc(20px + (50 - 20) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+.col{
+  cursor: pointer;
+}
+
+header{
+  z-index: 1;
+  //position: fixed;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  background: #fff;
+  @media (max-width: 1200px) {
+    padding: calc(10px + (20 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+  @media (max-width: 500px) {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img{
+    width: 350px;
+    height: 115px;
+    @media (max-width: 1200px) {
+      width: calc(100px + (350 - 100) * (100vw - 320px) / (1200 - 320));
+      height: calc(50px + (115 - 50) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+  nav{
+    padding: 35px;
+    @media (max-width: 1200px) {
+      padding: calc(20px + (35 - 20) * (100vw - 320px) / (1200 - 320));
+    }
+    @media (max-width: 610px) {
+      //display: none;
+    }
+  }
+  a{
+    text-decoration: none;
+    margin-left: 25px;
+    color: black;
+    font-size: 20px;
+    @media (max-width: 1200px) {
+      margin-left: calc(5px + (25 - 5) * (100vw - 320px) / (1200 - 320));
+      font-size: calc(10px + (20 - 10) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+  a:hover{
+    transition: .3s;
+    color: #ff6515;
+  }
+  a:active{
+    transition: .3s;
+    font-size: 22px;
+  }
+}
+
+.header-block{
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section-one{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  background-image: url('https://vladskudor.github.io/project/assets/images/sec1.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 260px 0;
+  @media (min-width: 1600px) {
+    background-position: center;
+  }
+  @media (max-width: 1600px) {
+    background-position: center;
+    padding: calc(5px + (130 - 5) * (100vw - 320px) / (1200 - 320));
+  }
+  p{
+    margin: 0;
+  }
+  .section-one-content{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .section-one-buttons{
+    background: #78340f;
+    display: flex;
+    min-width: 100px;
+    padding: 20px;
+    margin-top: 50px;
+    @media (max-width: 1200px) {
+      padding: calc(3px + (20 - 3) * (100vw - 320px) / (1200 - 320));
+      margin-top: calc(15px + (30 - 15) * (100vw - 320px) / (1200 - 320));
+    }
+    @media(max-width: 400px){
+      justify-content: center;
+    }
+    input{
+      padding: 25px 335px 25px 20px;
+      font-size: 14px;
+      @media (max-width: 1200px) {
+        font-size: calc(8px + (14 - 8) * (100vw - 320px) / (1200 - 320));
+        padding-top: calc(5px + (10 - 5) * (100vw - 320px) / (1200 - 320));
+        padding-bottom: calc(5px + (10 - 5) * (100vw - 320px) / (1200 - 320));
+        padding-right: calc(30px + (335 - 30) * (100vw - 320px) / (1200 - 320));
+      }
+      @media (max-width: 600px) {
+        padding-right: calc(100px + (150 - 100) * (100vw - 320px) / (1200 - 320));
+      }
+    }
+    button{
+      border: none;
+      padding: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      background: $color;
+      color: #fff;
+      @media (max-width: 1200px) {
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: calc(10px + (16 - 10) * (100vw - 320px) / (1200 - 320));
+        padding-top: calc(4px + (10 - 4) * (100vw - 320px) / (1200 - 320));
+        padding-bottom: calc(6px + (10 - 6) * (100vw - 320px) / (1200 - 320));
+      }
+      &:hover{
+        cursor: pointer;
+        transition: 0.7s;
+        background: #fff;
+        color: $color;
+      }
+    }
+  }
+}
+.section-two{
+  background: white;
+  padding: 90px;
+  @media (max-width: 1200px) {
+    padding: calc(10px + (90 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+}
+.section-two-content{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  @media (max-width: 1200px) {
+    padding-bottom: calc(10px + (50 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+}
+.section-two-switch-main-block{
+  width: 280px;
+  height: 3px;
+  background: grey;
+  position: relative;
+}
+.section-two-switch-block{
+  width: 100px;
+  height: 7px;
+  position: absolute;
+  top: -2px;
+  left: calc(50% - 50px);
+  background: $color;
+}
+
+.col{
+  margin: 0 20px;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: $shadow;
+  @media (max-width: 1200px) {
+    margin: calc(5px + (20 - 5) * (100vw - 320px) / (1200 - 320));
+  }
+  @media (max-width: 800px) {
+    opacity: 0.8;
+  }
+  .block-img{
+    padding: 30px;
+    display: inline-block;
+    box-shadow: $shadow;
+    border-radius: 50%;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+.section-three{
+  background: url('https://vladskudor.github.io/project/assets/images/sec3.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 37px;
+  @media (max-width: 1600px) {
+    padding-top: calc(10px + (37 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+  @media (max-width: 600px) {
+    background-position: center;
+    padding-bottom: 20px;
+  }
+  h1{
+    padding-bottom: 25px;
+    font-weight: bold;
+    color: $color;
+    @media (max-width: 1200px) {
+      padding-bottom: calc(5px + (10  - 5) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+  .container{
+    padding: 0;
+  }
+  .row{
+    margin: 0;
+    @media (max-width: 400px) {
+      display: block;
+      margin: 0;
+    }
+  }
+  .col{
+    background: #fff;
+    box-shadow: 0px 0px 5px 10px #ecf9ff;
+    @media (max-width: 1000px) {
+      padding: 3px 5px;
+    }
+    @media (max-width: 500px) {
+      margin: 10px 0;
+    }
+  }
+}
+
+
+.section-three-video{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+video{
+  margin-top: 60px;
+  width: 865px;
+  height: 460px;
+  @media (max-width: 1200px) {
+    width: calc(300px + (860 - 150) * (100vw - 320px) / (1200 - 320));
+    height: calc(200px + (460 - 50) * (100vw - 320px) / (1200 - 320));
+    margin-top: calc(20px + (60 - 20) * (100vw - 320px) / (1200 - 320));
+  }
+  @media (max-width: 800px) {
+    padding: 50px;
+  }
+}
+
+.section-three-header{
+  h1{
+    font-weight: 600;
+    color: rgb(33, 37, 41);
+  }
+}
+.section-three-header-text{
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: $color;
+  @media (max-width: 1200px) {
+    font-size: calc(14px + (26 - 14) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+.section-four{
+  background: white;
+  padding: 100px;
+  @media (max-width: 1200px) {
+    padding: calc(20px + (50 - 20) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .rows{
+    display: flex;
+    justify-content: center;
+    .cols{
+      background: #ff6515;
+      max-width: 300px;
+      margin-left: 10px;
+      ul{
+        margin: 0;
+        padding: 0;
+      }
+
+      li{
+        width: auto;
+        max-height: 100px;
+        min-height: 100px;
+        border: 1px solid white;
+        color: white;
+        padding: 20px;
+        @media(max-width: 400px){
+          overflow: hidden;
+          padding: calc(5px + (10 - 5) * (100vw - 320px) / (1200 - 320));
+        }
+
+        p{
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  // .cols{
+  // 	padding: 0;
+  // 	background: #ff6515;
+  // 	p{
+  // 		text-overflow: ellipsis;
+  // 	}
+  // 	ul{
+  // 		padding: 0;
+  // 	}
+  // 	li{
+  // 		color: #fff;
+  // 		text-align: left;
+  // 		padding: 28px;
+  // 		@media (max-width: 1200px) {
+  // 			padding: calc(4px + (28 - 4) * (100vw - 320px) / (1200 - 320));
+  // 		}
+  // 	}
+  // 	li:nth-child(1){
+  // 		font-weight: bold;
+  // 		font-size: 18px;
+  // 		color: #fff;
+  // 	}
+  // }
+}
+
+.section-five{
+  background: #ff6515;
+  padding: 140px;
+  @media (max-width: 1200px) {
+    padding: calc(20px + (140 - 20) * (100vw - 320px) / (1200 - 320));
+  }
+  h1{
+    color: #fff;
+  }
+  p{
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.section-five-content{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.block-email{
+  display: inline-block;
+  background: #78340f;
+  padding: 20px;
+  @media (max-width: 1200px) {
+    padding: calc(3px + (20 - 3) * (100vw - 320px) / (1200 - 320));
+  }
+
+  input{
+    padding: 25px 335px 25px 20px;
+    font-size: 14px;
+    @media (max-width: 1200px) {
+      font-size: calc(8px + (14 - 8) * (100vw - 320px) / (1200 - 320));
+      padding-top: calc(5px + (10 - 5) * (100vw - 320px) / (1200 - 320));
+      padding-bottom: calc(5px + (10 - 5) * (100vw - 320px) / (1200 - 320));
+      padding-right: calc(30px + (335 - 30) * (100vw - 320px) / (1200 - 320));
+    }
+    @media (max-width: 600px) {
+      padding-right: calc(100px + (150 - 100) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+  button{
+    border: none;
+    padding: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    background: $color;
+    color: #fff;
+    &:hover{
+      cursor: pointer;
+      transition: 0.7s;
+      background: #fff;
+      color: $color;
+    }
+    @media (max-width: 1200px) {
+      padding-left: 3px;
+      padding-right: 3px;
+      font-size: calc(10px + (16 - 10) * (100vw - 320px) / (1200 - 320));
+      padding-top: calc(4px + (10 - 4) * (100vw - 320px) / (1200 - 320));
+      padding-bottom: calc(6px + (10 - 6) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+}
+
+.buttons{
+  display: flex;
+}
+
+.section-six{
+  background: url('https://vladskudor.github.io/project/assets/images/sec6.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 80px 0;
+  @media (max-width: 1200px) {
+    padding: calc(20px + (80 - 20) * (100vw - 320px) / (1200 - 320));
+  }
+  div{
+    padding: 1px;
+  }
+  h1{
+    text-align: left;
+    color: $color;
+  }
+  p{
+    font-weight: bold;
+    text-align: left;
+  }
+
+  button{
+    width: 100%;
+    border: none;
+    padding: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    background: $color;
+    color: #fff;
+    float: right;
+    &:hover{
+      cursor: pointer;
+      transition: 0.7s;
+      background: #fff;
+      color: $color;
+    }
+    @media (max-width: 1200px) {
+      padding: calc(5px + (25 - 5) * (100vw - 320px) / (1200 - 320));
+    }
+  }
+  .col:nth-child(1){
+    background: #fff;
+    max-height: 475px;
+    max-width: 470px;
+    padding: 35px 35px 110px 35px;
+    input{
+      border: 1px solid grey;
+      width: 100%;
+      padding: 20px;
+      margin: 25px 0;
+      @media (max-width: 1200px) {
+        padding: calc(5px + (20 - 5) * (100vw - 320px) / (1200 - 320));
+      }
+    }
+  }
+  .col:nth-child(2){
+    background: #fff;
+    max-width: 670px;
+    padding: 40px;
+    @media (max-width: 1200px) {
+      padding: calc(10px + (40 - 10) * (100vw - 320px) / (1200 - 320));
+    }
+    h1{
+      text-align: center;
+    }
+    input{
+      border: 1px solid grey;
+      width: 100%;
+      min-width: 160px;
+      padding: 15px;
+      margin: 10px 0;
+      @media (max-width: 1200px) {
+        text-align: left;
+        width: calc(85% + (100 - 85) * (100vw - 320px) / (1200 - 320));
+        padding: calc(5px + (15 - 5) * (100vw - 320px) / (1200 - 320));
+      }
+
+    }
+    input:nth-last-child{
+      padding-bottom: 175px;
+      @media (max-width: 1200px) {
+        padding-bottom: calc(40px + (130 - 40) * (100vw - 320px) / (1200 - 320));
+      }
+    }
+    button{
+      margin: 20px 0;
+      padding: 15px 0;
+      width: 50%;
+      font-size: 16px;
+      @media (max-width: 1200px) {
+        font-size: calc(12px + (16 - 12) * (100vw - 320px) / (1200 - 320));
+        width: 50%;
+        min-width: 100px;
+        float: none;
+      }
+      &:hover{
+        cursor: pointer;
+        transition: 0.7s;
+        background: #fff;
+        color: $color;
+      }
+    }
+  }
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+footer{
+  text-align: center;
+  max-width: 1920px;
+  width: 100%;
+  background: #000;
+  padding: 45px;
+  color: #fff;
+}
+
+.activeNavigation{
+  display: flex;
+  justify-content: space-between;
+}

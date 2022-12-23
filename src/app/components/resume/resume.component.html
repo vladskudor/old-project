@@ -1,0 +1,135 @@
+<div id="body">
+  <section id="menu">
+    <div id="menu-div">
+      <div>
+        <b>Продукт: <input [(ngModel)]="nameEnter" type="text"></b>
+      </div>
+      <div>
+        <b>ОПИC: <input [(ngModel)]="descriptionEnter" type="text"></b>
+      </div>
+      <div>
+        <b>КІЛЬКІСТЬ: <input [(ngModel)]="lengthEnter" type="text"></b>
+      </div>
+      <div (click)="addPerson()" style="padding: 15px 0 0 0">
+        <button>ДОБАВИТИ</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="content">
+    <div>
+<!--      <div id="header-div" style="text-align: center;color: white">-->
+<!--        <h1><b style="background: black;border-radius: 10px;padding: 5px 10px 5px 10px">ПРОДУКТИ В НАЯВНОСТІ</b></h1>-->
+<!--      </div>-->
+
+      <div id="home">
+        <div #block *ngFor="let obj of array" id="blocks">
+          <div style="float: right;color: red;cursor: pointer">
+            <b (click)="funDelete(obj)">X</b>
+          </div>
+          <div>
+            <div>
+              Продукт:
+            </div>
+            <div style="text-align: center">
+              <b>{{obj.name}}</b>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <div>
+              ОПИC:
+            </div>
+            <div style="text-align: center">
+              <b>{{obj.description}}</b>
+            </div>
+          </div>
+          <hr>
+          <div>
+            КІЛЬКІСТЬ: <b>{{obj.length}}</b>
+          </div>
+          <div>
+            <hr>
+            <button (click)="fun1(block,obj)" id="button-shop">
+              КУПИТИ
+            </button>
+          </div>
+        </div>
+      </div>
+<!--      <div>-->
+<!--        <div>-->
+<!--          <h1 style="text-align: center;">-->
+<!--            <b style="background: black;color: white;padding: 5px 10px 5px 10px;border-radius: 10px">ПРОДАНО</b>-->
+<!--          </h1>-->
+<!--        </div>-->
+<!--        <div #block *ngFor="let byProd of byProduct" id="blocks">-->
+<!--          <div>-->
+<!--            <div>-->
+<!--              Продукт:-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <b>{{byProd.byName}}</b>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <hr>-->
+<!--          <div>-->
+<!--            ОПИC:-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <b>{{byProd.byDescription}}</b>-->
+<!--          </div>-->
+<!--          <hr>-->
+<!--          <div>-->
+<!--            КІЛЬКІСТЬ: <b>{{byProd.byLength}}</b>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <button (click)="clear()" style="border-radius: 5px">-->
+<!--          CLEAR-->
+<!--        </button>-->
+<!--      </div>-->
+    </div>
+  </section>
+</div>
+
+<div id="header-div" style="text-align: center;color: white">
+  <h1><b style="background: black;border-radius: 10px;padding: 5px 10px 5px 10px">ПРОДУКТИ В НАЯВНОСТІ</b></h1>
+</div>
+
+<div>
+  <div>
+    <h1 style="text-align: center;">
+      <b style="background: black;color: white;padding: 5px 10px 5px 10px;border-radius: 10px">ПРОДАНО</b>
+    </h1>
+  </div>
+  <div #block *ngFor="let byProd of byProduct" id="blocks">
+    <div>
+      <div>
+        Продукт:
+      </div>
+      <div>
+        <b>{{byProd.byName}}</b>
+      </div>
+    </div>
+    <hr>
+    <div>
+      ОПИC:
+    </div>
+    <div>
+      <b>{{byProd.byDescription}}</b>
+    </div>
+    <hr>
+    <div>
+      КІЛЬКІСТЬ: <b>{{byProd.byLength}}</b>
+    </div>
+  </div>
+</div>
+<div>
+  <button (click)="clear()" style="border-radius: 5px">
+    CLEAR
+  </button>
+</div>
+
+
+

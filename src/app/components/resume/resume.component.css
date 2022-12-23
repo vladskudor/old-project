@@ -1,0 +1,152 @@
+#body {
+  background-image: url("src/assets/images/овочі4.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -900px;
+  background-attachment: fixed;
+  height: 80vh;
+  /*padding-bottom: 400px;*/
+}
+
+@media (min-width: 2300px) {
+  #body {
+    background-attachment: inherit;
+  }
+}
+
+@media (max-width: 600px) {
+  #body{
+    height: 40vh;
+    padding-bottom: -500px;
+  }
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#header-div {
+  padding-top: 0;
+}
+
+#menu {
+  color: white;
+  background: black;
+  float: left;
+  padding: 0 20px 0 20px;
+  border-radius: 10px;
+  margin: 70px 20% 0 25%;
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  #menu input{
+    font-size: calc(10px + (20 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+
+  #header-div h1 , b{
+    font-size: calc(14px + (100 - 14) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+h1 {
+  padding: 20px 0 20px 0;
+}
+
+#menu-div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1050px) {
+  #home {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  #menu {
+    margin-left: 1%;
+  }
+
+  #home {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #body {
+    background-position-y: -100px;
+  }
+}
+
+@media (max-width: 600px) {
+  #menu {
+    margin: 10px 10% 10px 10%;
+  }
+
+  #menu-div {
+    display: grid;
+    padding-bottom: 15px;
+  }
+}
+
+#menu input {
+  border-radius: 5px;
+  width: 100px;
+  margin: 0 0 0 10px;
+  /*padding: 10px 0 10px 0;*/
+  float: right;
+}
+
+#menu button {
+  border-radius: 5px;
+  width: 100px;
+  /*margin: 5px 10px 10px 10px;*/
+  /*padding: 10px 0 10px 0;*/
+  float: right;
+}
+
+#menu b {
+  margin: 5px 10px 10px 10px;
+  padding: 10px 0 10px 0;
+  float: right;
+}
+
+#content {
+  position: relative;
+  top: 130px;
+  padding: 0 5% 0 5%;
+  width: 100%;
+}
+
+#content input {
+  margin: 10px;
+}
+
+#blocks {
+  color: white;
+  opacity: 0.8;
+  backdrop-filter: blur(2px);
+  background: black;
+  text-transform: uppercase;
+  width: auto;
+  min-width: 150px;
+  /*width: 150px;*/
+  border-radius: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  margin: 2%;
+  padding: 20px 1% 20px 1%;
+}
+
+#button-shop {
+  float: right;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#div {
+  width: 100px;
+  height: 100px;
+  background: red;
+}

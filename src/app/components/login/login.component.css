@@ -1,0 +1,233 @@
+h1 {
+  padding: 0 0 30px 0;
+  text-align: center;
+}
+
+section {
+  padding: 20px 0 20px 0;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+
+}
+
+form {
+  box-shadow: 0 0 10px #eee;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input {
+  display: inline-block;
+}
+
+#log-button {
+  background: #212529;
+  font-weight: bolder;
+  color: grey;
+}
+
+#log-button:hover {
+  transition: .5s;
+  background: black;
+  color: white;
+}
+
+a {
+  color: grey;
+}
+
+a:hover {
+  color: white;
+}
+
+#section-log {
+  background: #212529;
+  margin-top: calc(40vh - 300px);
+  padding: 100px 0 100px 0;
+}
+
+.header-button {
+  padding: 20px 0 35px 0;
+}
+
+.header-button button {
+  float: none;
+
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 0 10px 0 10px;
+  }
+
+  input {
+    width: 120px;
+  }
+
+  button {
+    margin-top: 5px;
+    display: block;
+    width: auto;
+  }
+}
+
+input {
+  margin-left: 10px;
+  font-size: 14px;
+  border: 1px solid grey;
+  padding: 0 0 3px 5px;
+  border-radius: 3px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.noneBlock {
+  display: none;
+}
+
+.none {
+  border: 1px solid grey;
+}
+
+.null {
+  border: 1px solid grey;
+}
+
+.small {
+  border: 5px solid red;
+}
+
+.big {
+  border: 5px solid green;
+}
+
+#passwordiv {
+  width: 185px;
+  height: 7px;
+  background: grey;
+  border-radius: 10px;
+}
+
+#passwinsidediv {
+  width: 100px;
+  height: 7px;
+}
+
+button {
+  margin-left: 1%;
+  padding: 3px 7px 3px 7px;
+  border-radius: 3px;
+  border: none;
+  background: grey;
+  color: #eee;
+  float: right;
+}
+
+button:hover {
+  background: #eee;
+  color: grey;
+
+}
+
+button:hover b {
+  display: inline;
+  color: blue;
+}
+
+b {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.user-table th, .user-table td {
+  padding: 10px 20px;
+}
+
+.user-table {
+  margin-top: 20px;
+}
+
+.edit-user-container ul li div i {
+  position: relative;
+}
+
+.edit-user-container ul li div input {
+  position: absolute;
+  left: 130px;
+}
+
+#td-button {
+  border: none;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#td-button button {
+  margin-bottom: 12.5px;
+  width: 100px;
+  font-size: 18px;
+}
+
+#td-text:first-letter {
+  font-size: 150%;
+  font-family: Dialog;
+}
+
+@media (max-width: 1100px) {
+  table {
+    width: 400px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  table {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  th {
+    font-size: 10px;
+  }
+
+  table td {
+    width: 25px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  table button {
+    width: 10px;
+    font-size: 8px;
+  }
+
+  #td-button {
+    display: grid;
+  }
+
+  #td-button button {
+    font-size: 8px;
+    width: 100%;
+  }
+
+  #td-button {
+    padding: 0;
+    margin: 0;
+  }
+
+  #td-button button {
+    padding: 0;
+    margin: 0;
+  }
+}

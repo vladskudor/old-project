@@ -1,0 +1,31 @@
+<div class="content-profiele">
+  <div>
+    <h2>your profiele</h2>
+  </div>
+  <div class="data-div">
+    <div class="data">
+      <div>
+        <input [(ngModel)]="user.name" type="text">
+        <p>NAME: <b>{{user.name}}</b></p>
+      </div>
+      <div>
+        <input [(ngModel)]="user.surname" type="text">
+        <p>SURNAME: <b>{{user.surname}}</b></p>
+      </div>
+      <div>
+        <input [(ngModel)]="user.email" type="text">
+        <p>EMAIL: <b>{{user.email}}</b></p>
+      </div>
+      <div>
+        <input [(ngModel)]="user.passw1" type="text">
+        <p>PASSWORD: <b>{{user.passw1}}</b></p>
+      </div>
+      <div class="button-div">
+        <button (click)="navEdit()">
+          edit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

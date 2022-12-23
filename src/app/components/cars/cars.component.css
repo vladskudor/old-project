@@ -1,0 +1,392 @@
+#section-header {
+  padding: 115px 0 20px 0;
+  display: flex;
+  background: grey;
+}
+
+#section-user {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#user {
+  text-align: center;
+}
+
+input {
+  width: 140px;
+}
+
+td {
+  cursor: pointer;
+}
+
+tr:hover td {
+  background: black;
+  color: grey;
+}
+
+#cars {
+  background: black;
+  width: 100%;
+  opacity: .9;
+  background-image: url("src/assets/images/renaultblack2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: center;
+  background-position-y: -30px;
+  background-size: 30%;
+  margin-top: 0;
+}
+
+@media (min-width: 1300px) {
+  #cars {
+    background-size: 30%;
+    background-attachment: inherit;
+  }
+}
+
+@media (max-width: 1500px) {
+  #cars {
+    background-position-y: calc(50vh - 200px);
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 700px) {
+  #cars {
+    background-position-y: calc(50vh - 150px);
+    background-size: 60%;
+  }
+}
+
+#section {
+  padding: 10px 100px 10px 100px;
+  position: relative;
+}
+
+#section3 {
+  color: white;
+  margin-top: 400px;
+  padding: 0 10px 30px 20px;
+  display: grid;
+  text-align: center;
+}
+
+#span {
+  float: right;
+  color: slategrey;
+}
+
+img {
+  border-radius: 10px;
+}
+
+button {
+  z-index: 1;
+  padding: 3px 0 3px 0;
+  background: #343a40;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  justify-content: space-around;
+  width: 140px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: black;
+  color: slategrey;
+}
+
+button:active {
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+#bCom {
+  background: #343a40;
+  color: #6c757d;
+  border-radius: 5px;
+  padding: 0 3px 5px 3px;
+}
+
+
+#bCom:hover {
+  background: black;
+  color: #343a40;
+}
+
+#section2 {
+  display: flex;
+  justify-content: center;
+}
+
+#section3 {
+  padding-top: 10px;
+  background: black;
+  opacity: .9;
+}
+
+#ul li {
+  margin-left: 80px;
+  display: block;
+}
+
+b {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+label {
+  font-size: 20px;
+  padding-top: 10px;
+  display: block;
+}
+
+label input {
+  float: right;
+  margin-left: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+
+.left-box {
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px 0 10px;
+  float: left;
+  margin-left: 5%;
+}
+
+@media(max-width: 500px) {
+  .left-box label{
+    font-size: calc(10px + (20 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .left-box b{
+    font-size: calc(12px + (20 - 12) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .left-box span{
+    font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .left-box input{
+    width: calc(50px + (100 - 50) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+.right-box {
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px 0 10px;
+  float: right;
+  margin-right: 5%;
+}
+
+@media(max-width: 500px) {
+  .right-box label{
+    font-size: calc(10px + (20 - 10) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .right-box b{
+    font-size: calc(12px + (20 - 12) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .right-box span{
+    font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1200 - 320));
+  }
+
+  .right-box input{
+    width: calc(50px + (100 - 50) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+li {
+  display: inline-grid;
+  list-style: none;
+}
+
+@media (max-width: 1200px) {
+  #section3 {
+    margin-top: 0;
+    display: grid;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    padding: 0 5% 0 5%;
+  }
+
+  .left-box {
+    box-shadow: 0 0 10px black;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid black;
+  }
+
+  .right-box {
+    box-shadow: 0 0 10px black;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid black;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #logOut {
+    margin-top: 10px;
+  }
+
+  #section-header button {
+    width: 90px;
+    font-size: 10px;
+  }
+
+  #inpComment {
+    width: 150px;
+  }
+
+  #span {
+    float: none;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  section {
+    font-size: 12px;
+    margin: auto 0;
+    padding: 0;
+  }
+
+  #section {
+    padding: 1%;
+  }
+
+  .left-box{
+    margin: 0;
+  }
+
+  .right-box{
+    margin: 0;
+  }
+
+  input {
+    float: none;
+    width: 80px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  b {
+    font-size: 16px;
+  }
+
+  #cars button {
+    width: 100px;
+  }
+}
+
+#user input {
+  float: none;
+}
+
+#options {
+  display: inline-block;
+}
+
+#table-options {
+  opacity: .8;
+  background: grey;
+  font-weight: 500;
+}
+
+#table-options tr td {
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+  border: 1px solid black;
+}
+
+#td-del-opt {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+#td-del-opt:hover {
+  color: black;
+  background: white;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  #table-options tr td {
+    padding: 0;
+    font-size: 10px;
+  }
+}
+
+.footer {
+  color: #000;
+  background: #212529;
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+
+#modalWindow {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .9;
+  color: white;
+}
+
+#content-modal {
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid white;
+  background: black;
+  width: 300px;
+  margin: 15% auto;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  background: black;
+}
+
+#section-image {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-image input {
+  width: 100px;
+  height: 40px;
+}
+
+#section-image img {
+  border: 2px solid white;
+  padding: 70px;
+  height: 100px;
+}

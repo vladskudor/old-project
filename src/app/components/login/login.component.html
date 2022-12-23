@@ -1,0 +1,49 @@
+<section *ngIf="!currentUser" id="section-log">
+  <form action="#">
+    <div>
+      <h1>ВХІД</h1>
+    </div>
+    <div>
+      <label for="inpLog">
+        Number/Email
+        <input #inpLog [(ngModel)]="inputValuelog" id="inpLog" name="login" type="text">
+      </label>
+    </div>
+    <div>
+      <label for="inpPas" style="display: flex;justify-content: space-between;padding: 20px 0 20px 0">
+        Password
+        <div>
+          <input #inpPas [(ngModel)]="inputValuepas" id="inpPas" name="password" type="password">
+        </div>
+      </label>
+      <div *ngIf="invalid"
+           style="text-transform: uppercase; color: red;text-align: center;font-weight: bold;padding: 0 0 10px 0">
+        <p>incorrect input</p>
+      </div>
+      <div>
+        <button (click)="inpPas.type = 'text'" [ngStyle]="{ display: inpPas.type == 'password' ? 'block' : 'none'}"
+                id="log-button">
+          (o)
+        </button>
+        <button (click)="inpPas.type = 'password'" [ngStyle]="{ display: inpPas.type == 'text' ? 'block' : 'none'}">
+          (o)
+        </button>
+      </div>
+    </div>
+    <div>
+      <button id="log-button">
+        <!--        <a style="text-decoration: none" [routerLink]="['/forms' , inputValuelog , inputValuepas]">-->
+        <!--          Відкрити-->
+        <!--        </a>-->
+        <a (click)="navigateStatus()" style="text-decoration: none">
+          Відкрити
+        </a>
+      </button>
+
+      <button (click)="nav()" id="log-button">
+        Реєстрація
+      </button>
+    </div>
+  </form>
+
+</section>

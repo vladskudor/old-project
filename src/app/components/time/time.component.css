@@ -1,0 +1,16 @@
+:host(.time-component-style) {
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: fixed;
+  right: 0;
+  top: 120px;
+  z-index: 1;
+}
+
+:host-context(.conteiner) {
+  border-radius: 0 0 10px 0;
+  width: 100px;
+  float: left;
+  color: grey;
+  text-align: center;
+}

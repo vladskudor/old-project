@@ -1,0 +1,250 @@
+<!--</section>-->
+<div #modal id="modalWindow">
+  <div id="content-modal">
+    <div id="modalContent">
+      <h4>Ви дійсно хочете видалити автомобіль <b style="text-transform: uppercase;color: blue;">{{firstcarName}}</b>
+      </h4>
+    </div>
+    <div id="btn">
+      <button (click)="yes(modal)">YES</button>
+      <button (click)="no(modal)">CANSEL</button>
+    </div>
+  </div>
+</div>
+<!--CARS-->
+<div id="cars">
+  <section id="section">
+    <div class="left-box">
+      <div>
+        <div>
+          <button (click)="enterCars1 = !enterCars1" *ngIf="enterCars1" style="margin-left: 112px">CLOSE</button>
+          <button (click)="enterCars1 = !enterCars1" *ngIf="!enterCars1" style="margin: 0 auto;">ENTER CAR</button>
+        </div>
+        <ul *ngIf="enterCars1" id="ul" style="position: absolute">
+
+          <li *ngFor="let arr of allCars">
+            <button (click)="carEnter(arr)"> {{ arr.firstcarName }}
+              <span (click)="delCar(arr , modal)"
+                    style="float: right;color: red;font-weight: bold;padding-right: 5px">X</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <b style="font-size: 28px">CAR: <span id="span">{{ firstcarName }}</span></b>
+      </div>
+      <div>
+        <b>CAR MODEL: <span id="span">{{ carModel1 }}</span></b>
+      </div>
+      <div>
+        <b>MAX SPEED: <span id="span">{{ maxSpeed1 }}</span></b>
+      </div>
+      <div>
+        <b>0 - 100km/hour<span id="span">{{ timeHundred1 }}</span></b>
+      </div>
+      <div>
+        <b>HORSE POWER: <span id="span">{{ horsePower }}</span></b>
+      </div>
+      <div>
+        <label for="inpcarName1">
+          NAME <input #carName1 [(ngModel)]="firstcarName" id="inpcarName1" type="text">
+        </label>
+
+        <label for="carModel1">
+          MODEL <input #carModels1 [(ngModel)]="carModel1" id="carModel1" type="text">
+        </label>
+
+        <label for="maxSpeed1">
+          SPEED <input #speed1 [(ngModel)]="maxSpeed1" appDirective id="maxSpeed1" type="number"><span
+          *ngIf="bestSpeed1">✅</span>
+        </label>
+
+        <label for="timeHundred2">
+          0 - 100km<input #hundred1 [(ngModel)]="timeHundred1" appDirective id="timeHundred1"
+                               type="number"><span
+          *ngIf="bestHundred1">✅</span>
+        </label>
+
+        <label for="horsepower1">
+          HP <input #horsepower [(ngModel)]="horsePower" appDirective id="horsepower1" type="number"><span
+          *ngIf="bestPower">✅</span>
+        </label>
+        <label style="float: left">
+          RATING <b style="color: green;border-bottom: none;font-size: 22px">{{ rating1 }}</b>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="right-box">
+      <div>
+        <div>
+          <button (click)="enterCars2 = !enterCars2" *ngIf="enterCars2" style="margin-left: 112px">CLOSE</button>
+          <button (click)="enterCars2 = !enterCars2" *ngIf="!enterCars2" style="margin: 0 auto;">ENTER CAR</button>
+        </div>
+        <ul *ngIf="enterCars2" id="ul" style="position: absolute">
+          <li *ngFor="let arr of allCars">
+            <button (click)="carEnter2(arr)"> {{ arr.firstcarName }}
+              <!--              <span style="float: right;color: red;font-weight: bold;padding-right: 5px">X</span>-->
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <b style="font-size: 28px">CAR: <span id="span">{{ secondcarName }}</span></b>
+      </div>
+      <div>
+        <b>CAR MODEL: <span id="span">{{ carModel2 }}</span></b>
+      </div>
+      <div>
+        <b>MAX SPEED: <span id="span">{{ maxSpeed2 }}</span> </b>
+      </div>
+      <div>
+        <b>0 - 100km/hour <span id="span">{{ timeHundred2 }}</span></b>
+      </div>
+      <div>
+        <b>HORSE POWER: <span id="span">{{ horsePower2 }}</span> </b>
+      </div>
+      <div>
+        <label for="inpcarName2">
+          NAME <input #carName2 [(ngModel)]="secondcarName" id="inpcarName2" type="text">
+        </label>
+
+        <label for="carModel2">
+          MODEL <input #carModels2 [(ngModel)]="carModel2" id="carModel2" type="text">
+        </label>
+
+        <label for="maxSpeed2">
+          SPEED <input #speed2 [(ngModel)]="maxSpeed2" appDirective id="maxSpeed2" type="number"><span
+          *ngIf="bestSpeed2">✅</span>
+        </label>
+
+        <label for="timeHundred2">
+          0 - 100km <input #hundred2 [(ngModel)]="timeHundred2" appDirective id="timeHundred2"
+                                type="number"><span
+          *ngIf="bestHundred2">✅</span>
+        </label>
+
+        <label for="horsepower">
+          HP <input #horsepower2 [(ngModel)]="horsePower2" appDirective id="horsepower" type="number"><span
+          *ngIf="bestPower2">✅</span>
+        </label>
+
+        <label style="float: left">
+          RATING <b style="color: green;border-bottom: none;font-size: 22px">{{ rating2 }}</b>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!--  <section id="section-image">-->
+  <!--    <input type="file" #readFileValue (change)="download(readFileValue)">-->
+  <!--    <div>-->
+  <!--      <img [src]="file" alt="">-->
+  <!--    </div>-->
+
+  <!--    <div>-->
+  <!--      <img src="" alt="">-->
+  <!--    </div>-->
+  <!--  </section>-->
+
+  <section id="section2">
+    <div>
+      <button
+        (click)="saveCar(arr , carName1.value , carName2.value , carModels1.value , carModels2.value , speed1.value , hundred1.value , horsepower.value , horsepower2.value )">
+        SAVE CAR
+      </button>
+      <button (click)="reset()">
+        RESET ALL
+      </button>
+      <button
+        (click)="compareCars( carName1 , carName2 , speed1.value , speed2.value , hundred1.value , hundred2.value , horsepower.value , horsepower2.value )">
+        COMPARE
+      </button>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div>
+      <p>Comment</p>
+      <p><input #inpComment [(ngModel)]="commentClear" id="inpComment" style="height: 50px;border-radius: 5px"
+                type="text">
+      </p>
+      <p>
+        <button (click)="addCom( carName1.value, inpComment.value )" style="width: 100px;margin: 0 auto;">ADD</button>
+      </p>
+    </div>
+    <div>
+      <p>COMMENTS LENGTH: {{ comments.length }}</p>
+    </div>
+    <div>
+      <h6>COMMENTS ABOUT CARS
+        <b (click)="inputComments = !inputComments" id="bCom" style="border-bottom: none;cursor: pointer">>></b>
+      </h6>
+    </div>
+    <div *ngIf="inputComments" id="block-comments">
+      <ul *ngFor="let com of comments">
+        <div>
+          <li
+            style="text-transform: uppercase;background: #343a40;color: #6c757d;padding: 0 5px 0 5px;border-radius: 5px;">
+            NAME: {{ com.userName }}
+          </li>
+        </div>
+        <div>
+          <li style="border: 1px solid black;padding: 0 10px 0 10px;border-radius: 5px;">{{ com.comment }}</li>
+        </div>
+      </ul>
+    </div>
+  </section>
+  <!--CARS-->
+  <div class="footer">
+    <div id="options">
+      <div>
+        <button (click)="allCarOptions = true" *ngIf="!allCarOptions">
+          LOOK ALL CARS
+        </button>
+      </div>
+      <div>
+        <!--        <div>-->
+        <!--          <input type="text" #allCarsSearch>-->
+        <!--          <button (click)="search(allCarsSearch.value)">-->
+        <!--            search-->
+        <!--          </button>-->
+        <!--        </div>-->
+
+        <table *ngIf="allCarOptions" id="table-options">
+          <!--          <input type="text" [(ngModel)]="inpFoundCar">-->
+          <!--          <input type="button" (click)="searchCar()" value="search">-->
+          <tr>
+            <td>CAR NAME</td>
+            <td>MODEL</td>
+            <td>MAX SPEED</td>
+            <td>ACCELERATION <br> TO ONE HUNDRED</td>
+            <td>HORSE POWER</td>
+            <td (click)="allCarOptions = false" *ngIf="allCarOptions">
+              <h1 style="cursor: pointer">X</h1>
+            </td>
+          </tr>
+          <tr (click)="transfer(optCars)" *ngFor="let optCars of allCars">
+            <td>{{optCars.firstcarName}}</td>
+            <td>{{optCars.carModel1}}</td>
+            <td>{{optCars.maxSpeed1}} <i>km</i></td>
+            <td>{{optCars.timeHundred1}} <i>s</i></td>
+            <td>{{optCars.horsePower}} <i>hp</i></td>
+            <td (click)="carDel(optCars)" id="td-del-opt">EDIT</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <svg class="bi bi-instagram" fill="currentColor" height="20" viewBox="0 0 16 16" width="20"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg>
+      <a href="https://www.instagram.com" style="color: white;font-weight: bold" target="_blank"> @p.r.o.s.t.o.y.7</a>
+    </div>
+  </div>
+</div>
+
+

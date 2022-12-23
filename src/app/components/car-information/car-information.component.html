@@ -1,0 +1,34 @@
+<div style="width: 100%;background: black;margin-top: -50px;height: 100vh;padding: 50px 0">
+  <div class="inform-block">
+    <div>
+      <p>name</p>
+      <input [(ngModel)]="currentParam.firstcarName" type="text">
+      <b>{{currentParam.firstcarName}}</b>
+    </div>
+    <div>
+      <p>model</p>
+      <input [(ngModel)]="currentParam.carModel1" type="text">
+      <b>{{currentParam.carModel1}}</b>
+    </div>
+    <div>
+      <p>max speed</p>
+      <input [(ngModel)]="currentParam.maxSpeed1" type="text">
+      <b>{{currentParam.maxSpeed1}} / <i>km/hour</i></b>
+    </div>
+    <div>
+      <p>acceleration 0 - 100</p>
+      <input [(ngModel)]="currentParam.timeHundred1" type="text">
+      <b>{{currentParam.timeHundred1}} / <i>s</i></b>
+    </div>
+    <div>
+      <p>horse power</p>
+      <input [(ngModel)]="currentParam.horsePower" type="text">
+      <b>{{currentParam.horsePower}} / <i>hp</i></b>
+    </div>
+    <div style="text-align: center">
+      <button (click)="save()">
+        save
+      </button>
+    </div>
+  </div>
+</div>

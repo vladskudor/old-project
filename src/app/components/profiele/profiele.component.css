@@ -1,0 +1,57 @@
+h2 {
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+p {
+  color: black;
+  font-weight: bold;
+}
+
+b {
+  letter-spacing: 1px;
+  color: #6c757d;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  background: #343a40;
+  color: #6c757d;
+  font-weight: bolder;
+  border: none;
+  padding: 0 10px;
+  letter-spacing: 1px;
+  transition: .5s;
+}
+
+button:hover {
+  background: black;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.data-div {
+  display: flex;
+  justify-content: center;
+}
+
+.data {
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px 40px;
+}

@@ -1,0 +1,316 @@
+h1 {
+  color: black;
+  text-transform: uppercase;
+  padding: 0 0 30px 0;
+  text-align: center;
+}
+
+i {
+  color: black;
+}
+
+section {
+  /*padding: 20px 0 20px 0;*/
+  background: linear-gradient(#eee, grey);
+  display: flex;
+  justify-content: center;
+}
+
+#section-log {
+  padding-bottom: 300px;
+}
+
+
+.header-button {
+  background: #eee;
+  padding: 20px 0 35px 0;
+}
+
+.header-button button {
+  float: none;
+  background: #212529;
+  font-weight: bolder;
+  color: grey;
+
+}
+
+.header-button button:hover {
+  background: black;
+  transition: .5s;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 0 10px 0 10px;
+  }
+
+  input {
+    width: 120px;
+  }
+
+  button {
+    margin-top: 5px;
+    display: block;
+    width: auto;
+  }
+}
+
+input {
+  margin-left: 10px;
+  font-size: 14px;
+  border: 1px solid grey;
+  padding: 0 0 3px 5px;
+  border-radius: 3px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.noneBlock {
+  display: none;
+}
+
+.none {
+  border: 1px solid grey;
+}
+
+.null {
+  border: 1px solid grey;
+}
+
+.small {
+  border: 5px solid red;
+}
+
+.big {
+  border: 5px solid green;
+}
+
+#passwordiv {
+  width: 185px;
+  height: 7px;
+  background: grey;
+  border-radius: 10px;
+}
+
+#passwinsidediv {
+  width: 100px;
+  height: 7px;
+}
+
+.name-surname-block input{
+  display: flex;
+  flex-direction: column;
+}
+
+.birsday-block{
+  display: flex;
+  flex-direction: column;
+}
+
+.button-finish{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-left: 1%;
+  padding: 3px 7px 3px 7px;
+  border-radius: 3px;
+  border: none;
+  background: grey;
+  color: #eee;
+}
+
+@media (max-width: 500px) {
+  .birsday-block{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .birsday-block input{
+    margin: 10px 0;
+  }
+
+  .button-finish{
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+button:hover {
+  background: #eee;
+  color: grey;
+
+}
+
+button:hover b {
+  display: inline;
+  color: blue;
+}
+
+b {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.user-table th, .user-table td {
+  padding: 10px 20px;
+}
+
+.user-table {
+  margin-top: 20px;
+}
+
+.edit-user-container ul li div i {
+  position: relative;
+}
+
+.edit-user-container ul li div input {
+  position: absolute;
+  left: 130px;
+}
+
+#td-button {
+  border: none;
+  border-top: 1px solid grey;
+  /*margin-top: 10px;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+}
+
+#td-button button {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  font-size: 18px;
+  background: #212529;
+  font-weight: bolder;
+  color: grey;
+}
+
+#td-button button:hover {
+  transition: .5s;
+  background: black;
+  color: white;
+}
+
+#td-text:first-letter {
+  text-transform: uppercase;
+  /*font-size: 150%;*/
+  font-weight: bold;
+  font-family: Dialog;
+}
+
+@media (max-width: 1100px) {
+  table {
+    width: 400px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  table {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  th {
+    font-size: 10px;
+  }
+
+  table td {
+    width: 25px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  table button {
+    width: 10px;
+    font-size: 8px;
+  }
+
+  #td-button {
+    display: grid;
+  }
+
+  #td-button button {
+    font-size: 8px;
+    width: 100%;
+  }
+
+  #td-button {
+    padding: 0;
+    margin: 0;
+  }
+
+  #td-button button {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+table tr td {
+  border: 1px solid black;
+}
+
+#button-set {
+  position: absolute;
+  left: 179px;
+  padding: 0 20px 0 20px;
+  height: 30px;
+  background: #212529;
+  font-weight: bolder;
+  color: grey;
+}
+
+#button-set:hover {
+  background: black;
+  color: white;
+  transition: .5s;
+}
+
+#form-button {
+  letter-spacing: 1px;
+  font-weight: bolder;
+  transition: .5s;
+  background: #212529;
+  color: grey;
+}
+
+#form-button:hover {
+  background: black;
+  color: white;
+}
+
+i:after {
+  content: '!';
+}
+
+.block-password label{
+  width: 100%;
+}
+
+.block-sex{
+  display: flex;
+  flex-direction: column;
+}
+
+.block-sex label{
+  width: 150px;
+}
+
+.block-sex input{
+  float: right;
+}

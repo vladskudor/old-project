@@ -1,0 +1,309 @@
+<div class="background-block">
+  <div class="header-block">
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.jpg" alt="">
+      </div>
+      <nav id="nav" *ngIf="showMenu">
+        <a href="#content">Home</a>
+        <a href="#section-two">About Us</a>
+        <a href="#section-three">How it works</a>
+        <a href="#section-six">Contact Us</a>
+      </nav>
+    </header>
+    <div class="burger-menu">
+      <svg (click)="showMenu = !showMenu" id="burgerMenu" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <section class="section-one">
+      <div class="section-one-content">
+        <div class="section-one-header">
+          <h1>Sell Your House Instantly</h1>
+        </div>
+        <div class="section-one-text">
+          <p>Simply tell us about your house and get a quaranteed</p>
+          <p>cash offer within 24 hours</p>
+        </div>
+        <div class="section-one-buttons">
+          <div>
+            <input type="text"  id="nameValue" placeholder="Submit your name">
+          </div>
+          <div>
+            <button id="getName">Get your offer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-two" id="section-two">
+      <div class="section-two-content">
+        <div class="section-two-header">
+          <div>
+            <h1>Key Features</h1>
+          </div>
+          <div class="section-two-switch">
+            <div class="section-two-switch-main-block">
+              <div class="section-two-switch-block">
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div>
+              <div class="block-img">
+                <img src="./assets/section-two-logo/logo1.jpg" alt="">
+              </div>
+              <div>
+                <h3>Header</h3>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dicta sapiente, sequi amet saepe harum,temporibus</p>
+                <p>exercitationem aperiam maxime nobis pariatur,</p>
+                <p>velit, dignissimos quo magnam quod blanditiis</p>
+                <p>laudantium nesciunt assumenda esse!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <div class="block-img">
+                <img src="./assets/section-two-logo/logo2.jpg" alt="">
+              </div>
+              <div>
+                <h3>Header</h3>
+              </div>
+              <div>
+                <div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Dicta sapiente, sequi amet saepe harum,temporibus</p>
+                  <p>exercitationem aperiam maxime nobis pariatur,</p>
+                  <p>velit, dignissimos quo magnam quod blanditiis</p>
+                  <p>laudantium nesciunt assumenda esse!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <div class="block-img">
+                <img src="./assets/section-two-logo/logo3.jpg" alt="">
+              </div>
+              <div>
+                <h3>Header</h3>
+              </div>
+              <div>
+                <div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>Dicta sapiente, sequi amet saepe harum,temporibus</p>
+                  <p>exercitationem aperiam maxime nobis pariatur,</p>
+                  <p>velit, dignissimos quo magnam quod blanditiis</p>
+                  <p>laudantium nesciunt assumenda esse!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-three" id="section-three">
+      <div class="section-three-content">
+        <div class="section-three-header">
+          <h1>Sell in 3 Easy Steps</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div>
+                <h1>01</h1>
+              </div>
+              <div>
+                <p class="section-three-header-text">Submit your house details</p>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <h1>02</h1>
+              </div>
+              <div>
+                <p class="section-three-header-text">Get all Cash offer within 24 hours</p>
+              </div>
+              <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae numquam fugit dignissimos ut.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <h1>03</h1>
+              </div>
+              <div>
+                <p class="section-three-header-text">Receive your money</p>
+              </div>
+              <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, exercitationem, amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-three-video">
+          <video src="" controls>
+
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="section-four">
+      <div class="section-four-content">
+        <div class="containers">
+          <div class="rows">
+            <div class="cols">
+              <ul>
+                <li>?</li>
+                <li><p>How many days will take to sell?</p></li>
+                <li><p>Do I have to open house for public inspection?</p></li>
+                <li><p>Do I have to repair house before selling?</p></li>
+                <li><p>Do i have to pay selling commission?</p></li>
+                <li><p>Can I stay till my other house is ready?</p></li>
+              </ul>
+            </div>
+            <div class="cols">
+              <ul>
+                <li>Housecart</li>
+                <li>
+                  <p>Receive an all cash offer in 24 hours</p>
+                </li>
+                <li>
+                  <p>No showing or public inspections</p>
+                </li>
+                <li>
+                  <p>No repairs or dress for sale</p>
+                </li>
+                <li>
+                  <p>thousands of dollars in savings</p>
+                </li>
+                <li>
+                  <p>Stay till you move to your new house</p>
+                </li>
+              </ul>
+            </div>
+            <div class="cols">
+              <ul>
+                <li>Traditionals</li>
+                <li>
+                  <p>House on market for over 3 month</p>
+                </li>
+                <li>
+                  <p>Spend Thousands of dollars in repair to make it ready for sale</p>
+                </li>
+                <li>
+                  <p>Pay thousands of dollars in agent fees</p>
+                </li>
+                <li>
+                  <p>Pay thousands of dollars in agent fees</p>
+                </li>
+                <li>
+                  <p>Move immediately once sold, may need to double mortgage</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-five">
+      <div class="section-five-content">
+        <div class="section-five-header">
+          <h1>Subscribe</h1>
+        </div>
+        <div>
+          <p>Sign up for real estate news</p>
+        </div>
+        <div class="block-email">
+          <div class="buttons">
+            <div>
+              <input type="text" placeholder="Enter your email adress">
+            </div>
+            <div>
+              <button>
+                Submit
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section-six" id="section-six">
+      <div class="section-six-content">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div>
+                <h1>Sell your House Instantly</h1>
+              </div>
+              <div>
+                <p>
+                  Simply tell us about your house and get a
+                </p>
+                <p>
+                  quaranteed cash offer within 24 hours
+                </p>
+              </div>
+              <div>
+                <input class="section-six-content-input" type="text" placeholder="Submit your house details">
+              </div>
+              <div>
+                <button>
+                  Get your offer
+                </button>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <h1>Get in Touch</h1>
+              </div>
+              <div>
+                <input type="text" placeholder="Your name">
+              </div>
+              <div>
+                <input type="text" placeholder="Your email adress">
+              </div>
+              <div>
+                <input type="text" placeholder="Your phone number">
+              </div>
+              <div>
+                <input type="text" placeholder="Subject">
+              </div>
+              <div>
+                <input type="text" placeholder="Leave a message">
+              </div>
+              <button>
+                Submit now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="footer">
+    <footer>
+      <div id="footer-block">
+        <p>Copyright C 2017 Real Estate Company Template - All Rights Reserved</p>
+        <div style="color: red" id="user">
+
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
